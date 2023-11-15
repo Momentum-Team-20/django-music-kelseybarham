@@ -2,4 +2,9 @@
 
 {% block content %}
 <h1>Django Music Website</h1>
+<ul>
+    {% for album in albums %}
+    <li> {{ album }}</li>
+    {% endfor %}
+</ul>
 {% endblock %}
