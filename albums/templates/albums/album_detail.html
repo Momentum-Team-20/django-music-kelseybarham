@@ -2,7 +2,9 @@
 
 {% block content %}
 <h1>Album detail page</h1>
-<ul>
-{{ album }}
-</ul>
+<p>{{ album.artist_name }}</p>
+<p>{{ album.title }}</p>
+<a href="{% url 'edit-album' album.pk %}">Edit this album</a>
+<a href="{% url 'delete-album' album.pk %}">Delete this album</a>
+
 {% endblock %}

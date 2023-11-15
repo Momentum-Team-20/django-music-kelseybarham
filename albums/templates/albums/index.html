@@ -2,10 +2,15 @@
 
 {% block content %}
 <h1>Django Music Website</h1>
+
+<a href="{% url 'create-album' %}">Create a new album</a>
+
 <ul>
     {% for album in albums %}
-    <li> {{ album }}</li>
+    <p><a href="{% url 'album-detail' album.pk %}">
+        {{ album }}
+    </a></p>
     {% endfor %}
-    
+
 </ul>
 {% endblock %}
