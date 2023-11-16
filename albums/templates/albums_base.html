@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <title>Django Album site</title>
+    <title>Django Album site homepage</title>
 </head>
 <body>
+    {% block sidebar %}
+    <ul class="sidebar-nav">
+        <a href="{% url 'home' %}">Album homepage</a>
+    </ul>
+    {% endblock %}
     {% block content %}
     {% endblock %}
 </body>
