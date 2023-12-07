@@ -1,0 +1,15 @@
+{% extends 'albums_base.html' %}
+
+{% block content %}
+<h1>Kelsey's Vinyl Record Collection</h1>
+
+<a href="{% url 'create-album' %}">Create a new album</a>
+
+<ul>
+    {% for album in albums %}
+    <p><a href="{% url 'album-detail' album.pk %}">
+        {{ album }}
+    </a> By {{ album.artist_name }}</p>
+    {% endfor %}
+</ul>
+{% endblock %}
